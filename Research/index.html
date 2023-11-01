@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>TDD - Research</title>
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="../images/NC.jpg">
+
+  <!-- for latex -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <!-- for toggling lists -->
+  <script type="text/javascript">
+    function toggleMe(a){
+      var e=document.getElementById(a);
+      if(!e)return true;
+      if(e.style.display=="none"){
+        e.style.display="block";
+      }
+      else{
+        e.style.display="none";
+      }
+      return true;
+    }
+  </script>
+
+</head>
+
+<body>
+
+<div style="padding-top:18px;padding-bottom:18px;width:100%;margin-top:0px;min-width:710px;border-bottom:0px solid #cccccc;text-align:center;font-size:16px">
+
+<a href="../index.html" class="menulink">Home</a>&nbsp;&nbsp;
+<a href="../Research/index.html" class="menulink">Research</a>
+
+</div>
+
+<div style="width:100%;margin-top:0px;min-width:720px;border-bottom:1px solid #cccccc">
+</div>
+
+
+<div class="container">
+  <div class="wrapper">
+
+    <div class="text">
+
+      <div class="pagetitle">
+    Publications and Preprints
+      </div>
+      
+      <div class="textblock">
+    <ol reversed>
+      <li style="padding-bottom: 5px;">
+        Categorical resolutions of filtered schemes, 2023.<br/>
+        <a href="https://arxiv.org/abs/2309.08330">arXiv</a> &#124;
+        <a class="pub", href=#, onClick="return toggleMe('CatFilt')"> &#x25B8; Abstract</a>
+        <div id="CatFilt", style="display:none; padding-top: 5px;">
+            &#x25B8; We give an alternative proof of the theorem by Kuznetsov and Lunts stating that any separated scheme of finite type over a field of characteristic zero admits a categorical resolution of singularities.
+            Their construction makes use of the fact that every variety (over a field of characteristic zero) can be resolved by a finite sequence of blow-ups along smooth centres.
+            We merely require the existence of (projective) resolutions. 
+            To accomplish this we put the $\mathcal{A}$-spaces of Kuznetsov and Lunts in a different light, viewing them instead as schemes endowed with finite filtrations.
+            The categorical resolution is then constructed by gluing together differential graded categories obtained from a hypercube of finite length filtered schemes.
+        </div>  
+      </li>	
+
+      <li style="padding-bottom: 5px;">
+        A note on affine cones over Grassmannians and their stringy $E$-functions, <em> Proc. Amer. Math. Soc. </em> , 151 (2023), no. 6, 2363&#45;2373.<br/>
+        <a href="https://arxiv.org/abs/2203.06040">arXiv</a> &#124;
+        <a href="https://doi.org/10.1090/proc/16378">Journal</a> &#124;
+        <a class="pub", href=#, onClick="return toggleMe('stringy')"> &#x25B8; Abstract</a>
+        <div id="stringy", style="display:none; padding-top: 5px;">
+            &#x25B8; We compute the stringy $E$-function of the affine cone over a Grassmannian. 
+            If the Grassmannian is not a projective space then its cone does not admit a crepant resolution. 
+            Nonetheless the stringy $E$-function is sometimes a polynomial and in those cases the cone admits a noncommutative crepant resolution. 
+            This raises the question as to whether the existence of a noncommutative crepant resolution implies that the stringy $E$-function is a polynomial.
+        </div>  
+      </li>	
+    </ol>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+
+</html>

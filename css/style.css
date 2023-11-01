@@ -1,0 +1,63 @@
+/* Courtesy of Pablo S Ocal who I coppied parts of this from */
+html { position: relative;min-height: 100%; }
+
+body { margin: 0 0 0px;padding:0px;border:0px;font-size:15px }
+.wrapper { width:650px;margin: 0 auto;padding-left:0px;padding-bottom:30px }
+.container { min-width:650px;color:#080808;padding:0px 30px 30px 30px;font-family:helvetica,arial;line-height: }
+
+a { text-decoration:none;color:#404040;border-bottom:1px solid #aaaaaa;font-family:helvetica,arial }
+a:hover { text-decoration:none;color:#202020;border-bottom:1px solid #303030 }
+
+p { line-height:135% }
+
+sup, sub { vertical-align:baseline;position:relative;top:-0.4em }
+sub { top:0.4em }
+
+.pagetitle { margin-bottom:40px;font-size:24px;text-align:center;font-family:helvetica,arial }
+
+a.textlink { text-decoration:none;color:#101010;border-bottom:1px solid #aaaaaa;font-family:helvetica,arial }
+a.textlink:hover { text-decoration:none;color:#202020;border-bottom:1px solid #303030 }
+
+a.imagelink { text-decoration:none;border:0px }
+a.imagelink:hover { text-decoration:none;border:0px }
+
+a.menulink { text-decoration:none;color:#606060;border-bottom:0px solid #aaaaaa;font-size:15px;font-family:helvetica,arial }
+a.menulink:hover { text-decoration:none;color:#202020;border-bottom:1px solid #303030 }
+
+.text { margin-top:80px;line-height:125% }
+.textblock { padding-left:7px;width:640px;margin:0 auto;text-align:justify }
+.textblockcentre { padding-left:2px;width:620px;text-align:center }
+.textblocklist { padding-left:7px;width:640px;margin:0 auto;line-height:150% }
+
+.problems { float:right }
+a.problems { text-decoration:none;color:#909090;border-bottom:0px solid #aaaaaa;font-family:helvetica,arial }
+a.problems:hover { text-decoration:none;color:#202020;border-bottom:1px solid #303030 }
+
+/*** Works on common browsers ***/
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+::-ms-selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: #000000;
+    color: #ffffff;
+}
