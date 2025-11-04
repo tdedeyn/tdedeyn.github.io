@@ -8,7 +8,7 @@ body { margin: 0 0 0px;padding:0px;border:0px;font-size:15px }
 a { text-decoration:underline;color:#404040;font-family:helvetica,arial }
 a:hover { text-decoration:underline;color:#202020}
 
-a.alt { text-decoration:none;color:#779ECB;font-family:helvetica,arial }
+a.alt { text-decoration:none;color:#586e8e;font-family:helvetica,arial }
 a.alt:hover { text-decoration:none;color:#202020; }
 
 a.alt2 { text-decoration:none;color:#404040;font-family:helvetica,arial }
