@@ -1,63 +1,196 @@
 /* Courtesy of Pablo S Ocal who I coppied parts of this from */
-html { position: relative;min-height: 100%; }
 
-body { margin: 0 0 0px;padding:0px;border:0px;font-size:15px }
-.wrapper { width:650px;margin: 0 auto;padding-left:0px;padding-bottom:30px }
-.container { min-width:650px;color:#080808;padding:0px 30px 30px 30px;font-family:helvetica,arial;line-height: }
+:root {
+    color-scheme: light dark;
+}
 
-a { text-decoration:underline;color:#404040;font-family:helvetica,arial }
-a:hover { text-decoration:underline;color:#202020}
+html { 
+    position: relative;
+    min-height: 100%; 
+}
 
-a.alt { text-decoration:none;color:#586e8e;font-family:helvetica,arial }
-a.alt:hover { text-decoration:none;color:#202020; }
+body { 
+    margin: 0 0 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 1rem;
+    font-family: helvetica,arial;
+    background-color: light-dark(#f3f5f7, #232F36);
+}
 
-a.alt2 { text-decoration:none;color:#404040;font-family:helvetica,arial }
-a.alt2:hover { text-decoration:none;color:#202020}
+.wrapper { 
+    width: 650px;
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-bottom: 30px 
+}
 
-p { line-height:135% }
+.container { 
+    min-width: 650px;
+    padding: 0px 30px 30px 30px;
+}
 
-sup, sub { vertical-align:baseline;position:relative;top:-0.4em }
-sub { top:0.4em }
+.nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin-top: 0px;
+    min-width: 720px;
+    border-bottom: 1px solid light-dark(#404040,#bfbfbf);
+    font-size: 1rem;
+    position: relative; 
+    text-align: center;
+}
 
-.pagetitle { margin-bottom:40px;font-size:24px;text-align:center;font-family:helvetica,arial }
+.nav a { 
+    text-decoration: none;
+    color: light-dark(#404040,#bfbfbf);
+    font-size: 1rem;
+}
 
-a.menulink { text-decoration:none;color:#606060;font-size:15px;font-family:helvetica,arial }
-a.menulink:hover { text-decoration:underline;color:#202020}
+.nav button {
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+    /* float: right; */
+    padding: 0 25px 0 0;
+    position: absolute; 
+    top: 1rem; 
+    bottom: 1rem;
+    right: 1rem; 
+    width: 1rem; 
+}
 
-.text { margin-top:80px;line-height:125% }
-.textblock { padding-left:7px;width:640px;margin:0 auto;text-align:justify }
-.textblockcentre { padding-left:2px;width:620px;text-align:center }
-.textblocklist { padding-left:7px;width:640px;margin:0 auto;line-height:150% }
+@media screen and (max-width: 720px) {
+  .nav button {position: static; vertical-align: middle;}
+}
 
-.problems { float:right }
-a.problems { text-decoration:none;color:#909090;border-bottom:0px solid #aaaaaa;font-family:helvetica,arial }
-a.problems:hover { text-decoration:none;color:#202020;border-bottom:1px solid #303030 }
+.nav a:hover { 
+    text-decoration: underline;
+    color: light-dark(#202020,#dfdfdf);
+}
+
+.maintitle {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: light-dark(#232F36,#f3f5f7);
+}
+
+.subtitle {
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    text-align: center;
+    color: light-dark(#232F36,#f3f5f7);
+}
+
+a { 
+    text-decoration: underline;
+    color: light-dark(#404040,#bfbfbf);
+}
+
+a:hover { 
+    text-decoration: underline;
+    color: light-dark(#202020,#dfdfdf);
+}
+
+a.alt { 
+    text-decoration: none;
+    color:light-dark(#647da2,#c8450c);
+}
+
+a.alt:hover { 
+    text-decoration: none;
+    color: light-dark(#202020,#dfdfdf);
+}
+
+a.alt2 { 
+    text-decoration: none;
+    color: light-dark(#404040,#bfbfbf);
+}
+
+a.alt2:hover {
+    text-decoration: none;
+    color: light-dark(#202020,#dfdfdf);
+}
+
+p { 
+    line-height: 135%;
+    color: light-dark(#232F36,#f3f5f7);
+}
+
+sup, sub { 
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em 
+}
+
+sub {
+    top: 0.4em 
+}
+
+.pagetitle { 
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.text { 
+    margin-top: 4rem;
+    line-height: 125%;
+    color: light-dark(#232F36,#f3f5f7);
+}
+
+.textblock { 
+    padding-left: 0.5rem;
+    width: 640px;
+    margin: 0 auto;
+    text-align: justify 
+}
+
+.textblockcentre { 
+    padding-left: 0.5rem;
+    width: 620px;
+    text-align: center
+}
+
+.textblocklist {
+    padding-left: 0.5rem;
+    width: 640px;
+    margin: 0 auto;
+    line-height: 150%
+}
+
+.right { 
+    float: right
+}
 
 /*** Works on common browsers ***/
 ::selection {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(#f3f5f7,#232F36);
 }
 
 /*** Mozilla based browsers ***/
 ::-moz-selection {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(#f3f5f7,#232F36);
 }
 
 /***For Other Browsers ***/
 ::-o-selection {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(#f3f5f7,#232F36);
 }
 
 ::-ms-selection {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(#f3f5f7,#232F36);
 }
 
 /*** For Webkit ***/
 ::-webkit-selection {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(#f3f5f7,#232F36);
 }

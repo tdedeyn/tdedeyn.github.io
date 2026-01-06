@@ -3,6 +3,8 @@
 <head>
 
   <title>TDD - Research</title>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <link href="../css/style.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="../images/favicon.ico">
 
@@ -10,7 +12,9 @@
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
   </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" 
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 
   <!-- for toggling lists -->
   <script type="text/javascript">
@@ -31,12 +35,11 @@
 
 <body>
 
-<div style="padding-top:18px;padding-bottom:18px;width:100%;margin-top:0px;min-width:710px;border-bottom:0px solid #cccccc;text-align:center;font-size:16px">
-<a href="../index.html" class="menulink">Home</a>&nbsp;&nbsp;
-<a href="../Research/index.html" class="menulink">Research</a>
-</div>
-
-<div style="width:100%;margin-top:0px;min-width:720px;border-bottom:1px solid #cccccc">
+<div class="nav">
+  <a href="../index.html">Home</a>&nbsp;&nbsp;
+  <a href="index.html">Research</a>
+  <button type ="button" id="theme"></button>
+  <script src="../swap_theme.js"></script>
 </div>
 
 <div class="container">
@@ -44,21 +47,20 @@
 
     <div class="text">
 
-      <div class="pagetitle">
-    Publications and Preprints
+      <div class="pagetitle" style="font-size:1.2rem;margin-bottom:1.5rem">
+          Publications and Preprints
       </div>
       
-      <div class="textblock">
+      <div class="textblock" style="font-size:14px">
     <ol reversed>
 
-      <li style="padding-bottom: 5px;">
-        Nonexistence of singly compactly generated $t$-structures for schemes (with <a class="alt2" href="https://anirbanbhaduri.com/">A. Bhaduri</a>, <a class="alt2" href="https://sites.google.com/view/michalhrbek/home">M. Hrbek</a>, <a class="alt2" href="https://lankp.github.io/">P. Lank</a> and <a class="alt2" href="https://kabeermr.github.io/">K. Manali-Rahul</a>), 2025.<br/> 
-        <a href="https://arxiv.org/abs/2511.01622">arXiv</a> &#124;
-        <a class="pub", href=#, onClick="return toggleMe('single_t')"> &#x25B8; Abstract</a>
-        <div id="single_t", style="display:none; padding-top: 5px;">
-            &#x25B8;      We show the first instances of schemes whose standard aisles on their derived category of quasi-coherent sheaves are not singly compactly generated. 
-        </div>  
-
+    <li style="padding-bottom: 5px;">
+      Nonexistence of singly compactly generated $t$-structures for schemes (with <a class="alt2" href="https://anirbanbhaduri.com/">A. Bhaduri</a>, <a class="alt2" href="https://sites.google.com/view/michalhrbek/home">M. Hrbek</a>, <a class="alt2" href="https://lankp.github.io/">P. Lank</a> and <a class="alt2" href="https://kabeermr.github.io/">K. Manali-Rahul</a>), 2025.<br/> 
+      <a href="https://arxiv.org/abs/2511.01622">arXiv</a> &#124;
+      <a class="pub", href=#, onClick="return toggleMe('single_t')"> &#x25B8; Abstract</a>
+      <div id="single_t", style="display:none; padding-top: 5px;">
+          &#x25B8;      We show the first instances of schemes whose standard aisles on their derived category of quasi-coherent sheaves are not singly compactly generated. 
+      </div>  
 
       <li style="padding-bottom: 5px;">
         Measuring birational derived splinters (with <a class="alt2" href="https://lankp.github.io/">P. Lank</a>, <a class="alt2" href="https://kabeermr.github.io/">K. Manali-Rahul</a> and <a class="alt2" href="https://sites.google.com/view/sridhar-venkatesh">S. Venkatesh</a>), 2025.<br/> 
@@ -75,11 +77,12 @@
         <a href="https://arxiv.org/abs/2510.23767">arXiv</a> &#124;
         <a class="pub", href=#, onClick="return toggleMe('latnctt')"> &#x25B8; Abstract</a>
         <div id="latnctt", style="display:none; padding-top: 5px;">
-            &#x25B8; We prove that, given the Balmer spectrum of any essentially small monoidal-triangulated category, one has a classification of semiprime thick tensor ideals arising in terms of a "pseudo-Hochster-dual" of the noncommutative Balmer spectrum. 
-            This extends Balmer's classification of radical thick tensor ideals to noncommutative tensor-triangular geometry. 
-            To achieve this, we utilize the notion of support data for lattices and frames, under which the classification is a consequence of Stone duality. 
-            We also give a characterization for when the noncommutative Balmer spectrum behaves as it does in tensor-triangular geometry, that is, when it is a spectral space with quasi-compact opens given by complements of supports, and show that rigid centrally generated monoidal-triangulated categories satisfy this property. 
-        </div>  
+            &#x25B8; We prove that, given the Balmer spectrum of any essentially small monoidal-triangulated category, one has a classification of semiprime thick tensor-ideals arising in terms of a "pseudo-Hochster-dual" of the noncommutative Balmer spectrum. 
+            This extends Balmer's classification of radical thick tensor-ideals to noncommutative tensor-triangular geometry. 
+            To achieve this, we utilize the notion of support data for lattices and frames, under which the classification follows via Stone duality. 
+            We also give a characterization for when the noncommutative Balmer spectrum behaves as it does in tensor-triangular geometry, that is, when it is a spectral space with quasi-compact opens given by complements of supports. 
+            Finally, we show that rigid centrally generated monoidal-triangulated categories satisfy this property, and we answer a question posed by Negron&#8211;Pevtsova regarding classification of one-sided tensor-ideals via cohomological support.
+          </div>  
 
       <li style="padding-bottom: 5px;">
         Quasi-perfect blowups detect regularity (with <a class="alt2" href="https://lankp.github.io/">P. Lank</a> and <a class="alt2" href="https://kabeermr.github.io/">K. Manali-Rahul</a>), 2025.<br/> 
