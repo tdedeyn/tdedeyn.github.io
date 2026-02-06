@@ -2,6 +2,9 @@
 
 :root {
     color-scheme: light dark;
+
+    --light-bg: oklch(96.92% 0.00353 248.573);
+    --dark-bg: oklch(29.718% 0.02073 234.038);
 }
 
 html { 
@@ -15,19 +18,20 @@ body {
     border: 0px;
     font-size: 1rem;
     font-family: helvetica,arial;
-    background-color: light-dark(#f3f5f7, #232F36);
-}
+    background-color: light-dark(var(--light-bg), var(--dark-bg));}
 
 .wrapper { 
-    width: 650px;
+    max-width: 650px;
     margin: 0 auto;
     padding-left: 0px;
     padding-bottom: 30px 
 }
 
 .container { 
-    min-width: 650px;
-    padding: 0px 30px 30px 30px;
+    /* min-width: 360px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 0px 30px 30px 30px; */
 }
 
 .nav {
@@ -35,8 +39,8 @@ body {
     padding-bottom: 1rem;
     width: 100%;
     margin-top: 0px;
-    min-width: 720px;
-    border-bottom: 1px solid light-dark(#404040,#bfbfbf);
+    /* min-width: 400px; */
+    border-bottom: 1px solid light-dark(oklch(37.5% 0 0),oklch(80% 0 0));
     font-size: 1rem;
     position: relative; 
     text-align: center;
@@ -44,7 +48,7 @@ body {
 
 .nav a { 
     text-decoration: none;
-    color: light-dark(#404040,#bfbfbf);
+    color: light-dark(oklch(37.5% 0 0),oklch(80% 0 0));
     font-size: 1rem;
 }
 
@@ -62,62 +66,58 @@ body {
     width: 1rem; 
 }
 
-@media screen and (max-width: 720px) {
-  .nav button {position: static; vertical-align: middle;}
-}
-
 .nav a:hover { 
     text-decoration: underline;
-    color: light-dark(#202020,#dfdfdf);
+    color: light-dark(oklch(25% 0 0),oklch(90% 0 0));
 }
 
 .maintitle {
     margin-bottom: 1rem;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     text-align: center;
-    color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(var(--dark-bg),var(--light-bg));
 }
 
 .subtitle {
     margin-bottom: 2.5rem;
     font-size: 1rem;
     text-align: center;
-    color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(var(--dark-bg),var(--light-bg));
 }
 
 a { 
     text-decoration: underline;
-    color: light-dark(#404040,#bfbfbf);
+    color: light-dark(oklch(37.5% 0 0),oklch(80% 0 0));
 }
 
 a:hover { 
     text-decoration: underline;
-    color: light-dark(#202020,#dfdfdf);
+    color: light-dark(oklch(25% 0 0),oklch(90% 0 0));
 }
 
 a.alt { 
     text-decoration: none;
-    color:light-dark(#647da2,#c8450c);
+    color:light-dark(oklch(58% 0.06 258),oklch(57% 0.18 39));
 }
 
 a.alt:hover { 
     text-decoration: none;
-    color: light-dark(#202020,#dfdfdf);
+    color: light-dark(oklch(32% 0.06 258),oklch(82% 0.18 39));
 }
 
 a.alt2 { 
     text-decoration: none;
-    color: light-dark(#404040,#bfbfbf);
+    color: light-dark(oklch(37.5% 0 0),oklch(80% 0 0));
 }
 
 a.alt2:hover {
     text-decoration: none;
-    color: light-dark(#202020,#dfdfdf);
+    color: light-dark(oklch(25% 0 0),oklch(90% 0 0));
 }
 
 p { 
     line-height: 135%;
-    color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(var(--dark-bg),var(--light-bg));
 }
 
 sup, sub { 
@@ -139,58 +139,68 @@ sub {
 .text { 
     margin-top: 4rem;
     line-height: 125%;
-    color: light-dark(#232F36,#f3f5f7);
+    color: light-dark(var(--dark-bg),var(--light-bg));
 }
 
 .textblock { 
-    padding-left: 0.5rem;
-    width: 640px;
+    max-width: 640px;
     margin: 0 auto;
     text-align: justify 
-}
-
-.textblockcentre { 
-    padding-left: 0.5rem;
-    width: 620px;
-    text-align: center
-}
-
-.textblocklist {
-    padding-left: 0.5rem;
-    width: 640px;
-    margin: 0 auto;
-    line-height: 150%
 }
 
 .right { 
     float: right
 }
 
+#bing {
+    max-width: min(350px, 100%);
+    height: auto;
+}
+
+#moi {
+    max-width: min(275px, 100%);
+    height: auto;
+}
+
+@media only screen and (max-width: 720px) {
+    .nav button {position: static; vertical-align: middle;}
+    .wrapper {
+        width: 85%;
+    }
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .maintitle {
+        font-size: min(10vw, 2.5em);
+    }
+}
+
 /*** Works on common browsers ***/
 ::selection {
-    background-color: light-dark(#232F36,#f3f5f7);
-    color: light-dark(#f3f5f7,#232F36);
+    background-color: light-dark(var(--dark-bg),var(--light-bg));
+    color: light-dark(var(--light-bg),var(--dark-bg));
 }
 
 /*** Mozilla based browsers ***/
 ::-moz-selection {
-    background-color: light-dark(#232F36,#f3f5f7);
-    color: light-dark(#f3f5f7,#232F36);
+    background-color: light-dark(var(--dark-bg),var(--light-bg));
+    color: light-dark(var(--light-bg),var(--dark-bg));;
 }
 
 /***For Other Browsers ***/
 ::-o-selection {
-    background-color: light-dark(#232F36,#f3f5f7);
-    color: light-dark(#f3f5f7,#232F36);
+    background-color: light-dark(var(--dark-bg),var(--light-bg));
+    color: light-dark(var(--light-bg),var(--dark-bg));
 }
 
 ::-ms-selection {
-    background-color: light-dark(#232F36,#f3f5f7);
-    color: light-dark(#f3f5f7,#232F36);
+    background-color: light-dark(var(--dark-bg),var(--light-bg));
+    color: light-dark(var(--light-bg),var(--dark-bg));
 }
 
 /*** For Webkit ***/
 ::-webkit-selection {
-    background-color: light-dark(#232F36,#f3f5f7);
-    color: light-dark(#f3f5f7,#232F36);
+    background-color: light-dark(var(--dark-bg),var(--light-bg));
+    color: light-dark(var(--light-bg),var(--dark-bg));
 }
